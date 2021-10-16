@@ -8,8 +8,14 @@ public class Student {
         double sredOcenkaMatem;
         double sredOcenkaEcconom;
         double sredOcenkaAngl;
+
     }
     class StudentTest {
+        double sredneeArifmet(Student st){
+            double sredOcenka =(st.sredOcenkaAngl+st.sredOcenkaEcconom+st.sredOcenkaMatem)/3;
+            System.out.println("Srednya arifmeticheskaya ocenka " + st.sirname + " " + st.name + " ravna " + sredOcenka);
+            return sredOcenka;
+        }
         public static void main(String[] args) {
             Student genri = new Student();
             genri.studentID = 1;
@@ -39,13 +45,10 @@ public class Student {
             samuil.sredOcenkaEcconom = 4.6;
             samuil.sredOcenkaAngl = 3.8;
 
-            System.out.println("Y student " + genri.name +" "+ genri.sirname + " c " + genri.course + " kursa srednia ocenka = "
-                    + (genri.sredOcenkaMatem + genri.sredOcenkaEcconom + genri.sredOcenkaAngl)/3 +" !");
-            System.out.println("Y student " + samuil.name +" "+ samuil.sirname + " c " + samuil.course + " kursa srednia ocenka = "
-                    + (samuil.sredOcenkaMatem + samuil.sredOcenkaEcconom + samuil.sredOcenkaAngl)/3 +" !");
-            System.out.println("Y student " + federico.name +" "+ federico.sirname + " c " + federico.course + " kursa srednia ocenka = "
-                    + (federico.sredOcenkaMatem + federico.sredOcenkaEcconom + federico.sredOcenkaAngl)/3 +" !");
-
+            StudentTest stTest = new StudentTest();
+            stTest.sredneeArifmet(genri);
+            stTest.sredneeArifmet(federico);
+            stTest.sredneeArifmet(samuil);
         }
 
     }
