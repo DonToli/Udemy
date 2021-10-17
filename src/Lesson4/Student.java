@@ -8,6 +8,20 @@ public class Student {
         double sredOcenkaMatem;
         double sredOcenkaEcconom;
         double sredOcenkaAngl;
+    Student(int studentID1,String name1,String sirname1,int course1,double sredOcenkaMatem1,double sredOcenkaEcconom1,double sredOcenkaAngl1){
+        studentID=studentID1;
+        name=name1;
+        sirname=sirname1;
+        course=course1;
+        sredOcenkaMatem=sredOcenkaMatem1;
+        sredOcenkaEcconom=sredOcenkaEcconom1;
+        sredOcenkaAngl=sredOcenkaAngl1;
+    }
+    Student(int studentID2,String name2,String sirname2,int course2){
+        this(studentID2,name2,sirname2,course2,0.0,0.0,0.0);
+    }
+    Student(){
+    }
 
     }
     class StudentTest {
@@ -17,24 +31,25 @@ public class Student {
             return sredOcenka;
         }
         public static void main(String[] args) {
-            Student genri = new Student();
-            genri.studentID = 1;
+
+            Student genri = new Student(1,"Genry","Ford",4,5,5,5);
+            /*genri.studentID = 1;
             genri.name = "Genry";
             genri.sirname = "Ford";
             genri.course = 4;
             // 5 бальная система образования
             genri.sredOcenkaMatem = 5;
             genri.sredOcenkaEcconom = 5;
-            genri.sredOcenkaAngl = 5;
+            genri.sredOcenkaAngl = 5;*/
 
-            Student federico = new Student();
-            federico.studentID = 2;
+            Student federico = new Student(2,"Fedia","Belo",3);
+            /*federico.studentID = 2;
             federico.name = "Fedia";
             federico.sirname = "Belo";
             federico.course = 3;
             federico.sredOcenkaMatem = 4.3;
             federico.sredOcenkaEcconom = 4.1;
-            federico.sredOcenkaAngl = 4.5;
+            federico.sredOcenkaAngl = 4.5;*/
 
             Student samuil = new Student();
             samuil.studentID = 3;
